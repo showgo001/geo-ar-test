@@ -1,15 +1,14 @@
 # geo-ar-test
+
 https://showgo001.github.io/geo-ar-test/
+
 
 ## for development
 
-### build image
-@geo-ar-test/
-```
-$ docker build . -t ar-docker  -f docker/Dockerfile
-```
+`docker-compose up` 後にhttps://0.0.0.0へアクセスするとdocs以下へsslでルーティングされます
 
-### run container
-```
-$ docker run --name some-nginx -d -p 8080:80 some-content-nginx
-```
+スマホのカメラで接続する場合はhostPCと同一ネットワークに置いた上で、
+docker-compose.yml内のyourhostdomain.comをhostPCのIPなどにしてください。
+
+PCのカメラを使う場合はssl接続する必要はないので、
+docker-composeは編集せずhostpcのIPに8080版ポートでhttp接続してマーカーを表示してください
